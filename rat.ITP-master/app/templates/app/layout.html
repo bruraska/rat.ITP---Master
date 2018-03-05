@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{ title }} - Projeto de ADS - Faculdade Impacta - Segundo Semestre</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/css/site.css' %}" />
+</head>
+<body>
+  <nav>
+   <ul>
+     <li class="dropdown">
+       <a href="" class="dropbtn">Aluno</a>
+       <div class="dropdown-content">
+         <a href="{% url 'listar_aluno' %}">Lista</a>
+         <a href="{% url 'novo_aluno' %}">Novo</a>
+       </div>
+     </li>
+  </nav>
+
+
+{% block content %}{% endblock %}
+
+
+
+{% block scripts %}{% endblock %}
+
+</body>
+    <script src="{% static 'app/js/scripts.js' %}"></script>
+</html>
